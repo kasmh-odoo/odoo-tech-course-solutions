@@ -390,45 +390,7 @@ Copy
                 <div>
                     <p> If the fields are added correctly to the eagle.property model, it should resemble the following:
                     </p>
-                    <pre><code>from odoo import models, fields
-
-class Animals(models.Model):
-    _name = "animals"
-    _description = "Animals"
-
-    nickname = fields.Char(string="Nickname", required=True)
-    picture = fields.Image(string="Picture", max_width=500, max_height=500)
-    birth_date = fields.Date(string="Birth Date")
-    description = fields.Text(string="Description")
-    gender = fields.Selection(
-        selection=[
-            ('male', 'Male'),
-            ('female', 'Female'),
-        ],
-        string="Gender",
-        required=True
-    )
-    weight = fields.Float(string="Weight")
-    arrival_time = fields.Datetime(string="Arrival Time")
-    state = fields.Selection(
-        selection=[
-            ('not_received', 'Not Received'),
-            ('at_center', 'At the Center'),
-            ('released', 'Released'),
-        ],
-        string="Status",
-        default='not_received'
-    )
-    is_vaccinated = fields.Boolean(string="Is Vaccinated", default=True)
-    diet_type = fields.Selection(
-        selection=[
-            ('herbivore', 'Herbivore'),
-            ('carnivore', 'Carnivore'),
-            ('omnivore', 'Omnivore'),
-        ],
-        string="Diet Type"
-    )
-    feeding_time = fields.Float(string="Feeding Time")</code></pre>
+                    <img src = "../assets/img/activity 2.png" />
                 </div>
 
                 <!-- BOTTOM NAV -->

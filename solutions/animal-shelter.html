@@ -326,7 +326,7 @@
       <span></span><span></span><span></span>
     </button>
     <a href="/odoo-tech-course/" class="site-name">Odoo Technical Course</a>
-    <span class="nav-right">Odoo Technical Course</span>
+    <span class="nav-right">Howdy Partner</span>
   </header>
 
   <div class="layout">
@@ -336,38 +336,27 @@
       <ul class="sidebar-links">
         <li>
           <section class="sidebar-group depth-0">
-            <p class="sidebar-heading open"><span>Solutions</span></p>
+            <p class="sidebar-heading open"><span>Exercises</span></p>
             <ul class="sidebar-links sidebar-group-items">
               <li>
                 <section class="sidebar-group is-sub-group depth-1">
                   <p class="sidebar-heading"><span>Animal Shelter</span></p>
                   <ul class="sidebar-links sidebar-group-items">
-                    <li><a href="./exercises/animal-shelter-part-1.html"
-                        class="sidebar-link">Activity 1</a></li>
-                    <li><a href="./exercises/animal-shelter-part-2.html"
-                        class="sidebar-link">Activity 2</a></li>
-                    <li><a href="./exercises/animal-shelter-part-3.html"
-                        class="sidebar-link">Activity 3</a></li>
-                    <li><a href="./exercises/animal-shelter-part-4.html"
-                        class="sidebar-link">Activity 4</a></li>
-                    <li><a href="./exercises/animal-shelter-part-5.html"
-                        class="sidebar-link">Activity 5</a></li>
-                    <li><a href="./exercises/animal-shelter-part-6.html"
-                        class="sidebar-link">Activity 6</a></li>
-                    <li><a href="./exercises/animal-shelter-part-7.html"
-                        class="sidebar-link">Activity 7</a></li>
-                    <li><a href="./exercises/animal-shelter-part-8.html"
-                        class="sidebar-link">Activity 8</a></li>
-                    <li><a href="./exercises/animal-shelter-part-9.html"
-                        class="sidebar-link">Activity 9</a></li>
-                    <li><a href="./exercises/animal-shelter-part-10.html"
-                        class="sidebar-link">Activity 10</a></li>
+                    <li><a href="./animal-shelter-part-1.html" class="sidebar-link">Activity 1</a></li>
+                    <li><a href=./animal-shelter-part-2.html" class="sidebar-link">Activity 2</a></li>
+                    <li><a href="./animal-shelter-part-3.html" class="sidebar-link">Activity 3</a></li>
+                    <li><a href="./animal-shelter-part-4.html" class="sidebar-link">Activity 4</a></li>
+                    <li><a href="./animal-shelter-part-5.html" class="sidebar-link">Activity 5</a></li>
+                    <li><a href="./animal-shelter-part-6.html" class="sidebar-link">Activity 6</a></li>
+                    <li><a href="./animal-shelter-part-7.html" class="sidebar-link">Activity 7</a></li>
+                    <li><a href="./animal-shelter-part-8.html" class="sidebar-link">Activity 8</a></li>
+                    <li><a href="./animal-shelter-part-9.html" class="sidebar-link">Activity 9</a></li>
+                    <li><a href="./animal-shelter-part-10.html" class="sidebar-link">Activity 10</a></li>
                   </ul>
                 </section>
               </li>
             </ul>
           </section>
-        </li>
       </ul>
     </aside>
 
@@ -377,31 +366,91 @@
 
         <!-- TOP NAV -->
         <div class="page-nav-top">
-          <a href="./exercises/animal-shelter-part-1.html">Go to Activity 1 →</a>
+          <a href="./animal-shelter-part-1.html">← Go to Activity 1</a>
+          <a href="/odoo-tech-course/exercises/sallys-flower-shop/models.html">Models →</a>
         </div>
 
         <!-- PAGE CONTENT -->
         <h1>Animal Shelter Management</h1>
         <p>An animal rescue and rehabilitation center has approached your company to implement a shelter management
-          solution using Odoo.</p>
-    
+          solution using Odoo. Their requirements are as follows:</p>
+
+        <h2>Animals</h2>
+        <p>The rescued, rehabilitated, and resident animals to be managed within the shelter module. Animals include the
+          following attributes based on the current system schema:</p>
+        <ul>
+          <li><strong>Nickname:</strong> A descriptive name for the individual animal (Required).</li>
+          <li><strong>Picture:</strong> An image upload field for the animal's profile (Max dimensions: 500x500 pixels).
+          </li>
+          <li><strong>Birth Date:</strong> The estimated or known date of birth for the animal.</li>
+          <li><strong>Description:</strong> A detailed text summary of the animal's history, behavior, or special needs.
+          </li>
+          <li><strong>Gender:</strong> The sex of the animal (Male or Female, Required).</li>
+          <li><strong>Weight:</strong> The current weight of the animal.</li>
+          <li><strong>Arrival Time:</strong> The precise date and time the animal was admitted to the center.</li>
+          <li><strong>Status:</strong> The current lifecycle stage of the animal (Not Received, At The Center, or
+            Released). Defaults to "Not Received".</li>
+          <li><strong>Is Vaccinated:</strong> A checkbox indicating vaccination status. Defaults to True.</li>
+          <li><strong>Diet:</strong> The dietary classification of the animal (Herbivore, Carnivore, or Omnivore).</li>
+          <li><strong>Animal Type:</strong> A categorization linking the animal to a specific species group (e.g.,
+            Canine, Feline, Raptor).</li>
+          <li><strong>Feeding Time:</strong> The scheduled daily time for feeding the animal.</li>
+          <li><strong>Vaccines:</strong> A list of medical vaccines administered to the animal.</li>
+          <li><strong>Permitted Release Countries:</strong> A list of target geographical regions where the animal is
+            legally allowed to be re-introduced or adopted.</li>
+          <li><strong>Location:</strong> The specific pen, enclosure, or wing within the facility where the animal is
+            housed.</li>
+          <li><strong>Sponsor:</strong> The external partner (individual or corporate donor) sponsoring the animal’s
+            care.</li>
+          <li><strong>Assigned Vet:</strong> The internal staff veterinarian responsible for the animal’s health.</li>
+          <li><strong>Vet Phone:</strong> A read-only field automatically pulling the assigned veterinarian's work phone
+            number.</li>
+          <li><strong>Final Released Country:</strong> The specific country where the animal was successfully released
+            or adopted.</li>
+        </ul>
+
+        <h2>Animal Types</h2>
+        <p>The species of an animal</p>
+        <ul>
+          <li><strong>Name:</strong> The species category or type name (Required).</li>
+        </ul>
+
+        <h2>Animal Vaccines</h2>
+        <p>Medical records of preventative treatments available.</p>
+        <ul>
+          <li><strong>Name:</strong> The name of the specific vaccine (Required).</li>
+        </ul>
+
+        <h2>Animal Locations</h2>
+        <p>The specific pen, enclosure, or wing within the facility where the animal is
+            housed.</p>
+        <ul>
+          <li><strong>Name:</strong> The name of the specific location (Required).</li>
+        </ul>
 
         <div class="note-box">
           <h2>Implementation Notes</h2>
           <ul>
-            <li><strong>Custom Models:</strong> Create appropriate models, views, and access rights for Animals, Animal Types, Animal Locations and Animal Vaccines.</li>
-            <li><strong>Inheritance:</strong> Animal sponsors are <code>res.partner</code> records. The vets are <code> hr.employee </code> records. Add fields to these Python
-              models and their existing form views.</li>
-            <li><strong>Navigation:</strong> Create a new top-level menu item titled <strong>Animal Shelter</strong>.
+            <li><strong>Custom Models:</strong> Create appropriate models, views, and access rights for Animals, Animal
+              Types, Animal Locations and Shelters. Ensure proper relational fields (Many2one, Many2many) are
+              established between them.</li>
+            <li><strong>Inheritance:</strong> Sponsors are <code>res.partner</code> records. Vets are existing shelter
+              employees linked to <code>hr.employee</code> with a related field to fetch their work phone automatically.
             </li>
+            <li><strong>Logic &amp; Constraints:</strong> Implement a Python constraint (<code>@api.constrains</code>)
+              ensuring neither the Permitted Release Countries nor the Final Released Country can include "Belgium". Add
+              header buttons on the form view to trigger manual state changes to <code>At The Center</code> and
+              <code>Released</code>.
+            </li>
+            <li><strong>Navigation:</strong> Create a new top-level menu item titled <strong>Shelter Management</strong>
+              with appropriate sub-menus for managing animals, species types, and facility locations.</li>
           </ul>
         </div>
 
-        <p> If you feel unsure, you can refer to the solutions for each exercise here. Good luck! </p>
-
         <!-- BOTTOM NAV -->
         <div class="page-nav-bottom">
-          <a href="./exercises/animal-shelter-part-1.html">Go to Activity 1 →</a>
+          <a href="./animal-shelter-part-1.html">← Go to Activity 1</a>
+          <a href="/odoo-tech-course/exercises/sallys-flower-shop/models.html">Models →</a>
         </div>
 
       </div>

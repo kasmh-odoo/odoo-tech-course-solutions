@@ -375,6 +375,8 @@ Copy
                         <li>
                             Add the necessary attributes in each field.
                         </li>
+                        <li> Add a folder called security and create a file named ir.model.access.csv.</li>
+                        <li> Add a model access right in this file for the animals model.</li>
                     </ul>
                 </div>
                 <div>
@@ -384,12 +386,18 @@ Copy
                             Note that the label of a field, if not provided as an attribute, is automatically set from
                             the variable name e.g. feeding_time will become Feeding Time.
                         </li>
+                        <li> The name of the model uses the snake case naming convention with a prefix e.g. model_animals.</li>
+                        <li> Different access rights are given to different users using the group_id:id column.</li>
                     </ul>
                 </div>
                 <div>
                     <p> If the fields are added correctly to the animals model, it should resemble the following:
                     </p>
                     <img src = "../assets/img/activity 2.png" />
+                </div>
+
+                <div> The security file should contain the following:
+                    <img src = "../assets/img/security activity 2.png" />
                 </div>
 
                 <!-- BOTTOM NAV -->

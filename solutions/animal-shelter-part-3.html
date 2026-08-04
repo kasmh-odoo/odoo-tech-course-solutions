@@ -367,39 +367,27 @@ Copy
                 <!-- PAGE CONTENT -->
                 <h1>Animal Shelter — Activity 3</h1>
                 <div>
-                    <p> The new module should appear in the apps list as an icon. To achieve this, we have to do the
-                        following:
+                    <h6> To-Do's </h6>
                     <ul>
-                        <li>
-                            Add a root menu item for the module.
-                        </li>
-                        <li>
-                            Add a submenu for the animals model.
-                        </li>
+                        <li> Add a new folder called views and add an XML file inside it. </li>
+                        <li> Define two view records in the XML file, one for the form view and other for the list view.</li>
+                        <li> Add two menu items using <menuitem> element below the view records.</li>
+                        <li> Add a window action using its model ir.actions.act_window before the menu item.</li>
+                        <li> Link the window action to the submenu item using the action attribute in the menu item element.</li>
                     </ul>
-
-                    </p>
-                    <p> The animals model needs views to visualize its records. Here is a list of things to do:
+                </div>
+                <div>
+                    <h6> Notes </h6>
                     <ul>
-                        <li>
-                            Create a form and list view for the model.
-                        </li>
-                        <li>
-                            Display the model's fields in these views.
-                        </li>
+                        <li> Wrap all the XML code in an <odoo> element.</li>
+                        <li> For view file names, the naming convention is <model_name>_views.xml e.g. animals_views.xml. </li>
+                        <li> For view record IDs, usually the model name and view type is added without any strict naming convention e.g. view_animals_form. </li>
+                        <li> For root menus, have the word 'root' as a naming convention e.g. animal_shelter_menu_root</li>
+                        <li> Root menus, or menus without any parent, appear on the apps selection screen.</li>
+                        <li> A menu item without a linked action or a submenu does not appear in the view.</li>
+                        <li> Window actions must be always defined before menu items so that menu items can find their references.</li>
+                        <li> Window actions have useful fields one of which can be used to filter records in the views.</li>
                     </ul>
-                    </p>
-                    <p> Menu items do not function without actions. In this part, we have to:
-                    <ul>
-                        <li>
-                            Add a window action for accessing the views of the animals model.
-                        </li>
-                        <li>
-                            Link the action to the menu item.
-                        </li>
-                    </ul>
-
-                    </p>
                 </div>
 
                 <!-- BOTTOM NAV -->

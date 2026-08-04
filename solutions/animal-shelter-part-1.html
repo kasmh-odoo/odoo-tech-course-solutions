@@ -362,19 +362,32 @@ Copy
                 <!-- PAGE CONTENT -->
                 <h1>Animal Shelter — Activity 1</h1>
                 <div>
-                    <p> In this case study, we will begin by creating a new module for an animal shelter. Let us call
-                        this module Animal Shelter. Furthermore, we have to do the following:
+                    <h6> To Do's</h6>
+
                     <ul>
+                        <li> Create a module <b> animal_shelter</b></li>
+                        <li> Create the <b> __init__.py</b> and <b> __manifest__.py</b> files and a new folder models
+                            with another __init__.py inside it.</li>
                         <li>
-                            Create a new model to manage all the animals in the shelter.
-                        </li>
-                        <li>
-                            Ensure to create any/all other necessary files for the module.
+                            Create a new model <b> animals </b>to manage all the animals in the shelter.
                         </li>
                     </ul>
 
+                </div>
 
-
+                <div>
+                    <h6> Notes </h6>
+                    <p>
+                        Please note the following when creating the new model:
+                    <ul>
+                        <li> The animals model should extend the models.Model base class, as it will allow for
+                        creation of persistent records.</li>
+                        <li> By convention, the naming of the Python files linked to a model should follow the snake case
+                        e.g. animals.py.</li>
+                        <li> Each model should be contained in its own separate file for maintainability and readability.
+                        Once done, the file structure of the module should look like this:</li>
+                    </ul>
+                    <img src = "../assets/img/module_structure.png" />
                     </p>
                 </div>
 

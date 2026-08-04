@@ -367,47 +367,68 @@ Copy
                 <!-- PAGE CONTENT -->
                 <h1>Animal Shelter — Activity 2</h1>
                 <div>
-                    <p> In the newly created model animals, add the following fields:
+                    <h6> To Do's</h6>
                     <ul>
                         <li>
-                            A mandatory character field for the animal's nickname.
+                            Add fields using the correct Python class. Ensure that the fields library is imported.
                         </li>
                         <li>
-                            An image field for the animal's picture with a maximum width and height of 500 pixels.
-                        </li>
-                        <li>
-                            A date field to record the animal's birth date.
-                        </li>
-                        <li>
-                            A text field for a detailed description of the animal.
-                        </li>
-                        <li>
-                            A mandatory selection field to specify the animal's gender (Male or Female).
-                        </li>
-                        <li>
-                            A float field to store the animal's weight.
-                        </li>
-                        <li>
-                            A date and time field to record the animal's precise arrival time.
-                        </li>
-                        <li>
-                            A selection field to show whether the animal is "not received", "at the center" or
-                            "released". When creating a new animal, the value should be "not received".
-                        </li>
-                        <li>
-                            A boolean field to show whwther the animal is vaccinated or not. By default, it should be
-                            true.
-                        </li>
-                        <li>
-                            A selection field to show the diet type of the animal. It can be a herbivore, a carnivore or
-                            an omnivore.
-                        </li>
-                        <li>
-                            A float field for the feeding time of the animal.
+                            Add the necessary attributes in each field.
                         </li>
                     </ul>
-
+                </div>
+                <div>
+                    <h6> Notes </h6>
+                    <ul>
+                        <li>
+                            Note that the label of a field, if not provided as an attribute, is automatically set from
+                            the variable name e.g. feeding_time will become Feeding Time.
+                        </li>
+                        <li> There are useful methods in specific field classes e.g. today() method in Date class.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p> If the fields are added correctly to the eagle.property model, it should resemble the following:
                     </p>
+                    <pre><code>from odoo import models, fields
+
+class Animals(models.Model):
+    _name = "animals"
+    _description = "Animals"
+
+    nickname = fields.Char(string="Nickname", required=True)
+    picture = fields.Image(string="Picture", max_width=500, max_height=500)
+    birth_date = fields.Date(string="Birth Date")
+    description = fields.Text(string="Description")
+    gender = fields.Selection(
+        selection=[
+            ('male', 'Male'),
+            ('female', 'Female'),
+        ],
+        string="Gender",
+        required=True
+    )
+    weight = fields.Float(string="Weight")
+    arrival_time = fields.Datetime(string="Arrival Time")
+    state = fields.Selection(
+        selection=[
+            ('not_received', 'Not Received'),
+            ('at_center', 'At the Center'),
+            ('released', 'Released'),
+        ],
+        string="Status",
+        default='not_received'
+    )
+    is_vaccinated = fields.Boolean(string="Is Vaccinated", default=True)
+    diet_type = fields.Selection(
+        selection=[
+            ('herbivore', 'Herbivore'),
+            ('carnivore', 'Carnivore'),
+            ('omnivore', 'Omnivore'),
+        ],
+        string="Diet Type"
+    )
+    feeding_time = fields.Float(string="Feeding Time")</code></pre>
                 </div>
 
                 <!-- BOTTOM NAV -->

@@ -367,13 +367,11 @@ Copy
                 <!-- PAGE CONTENT -->
                 <h1>Animal Shelter — Activity 4</h1>
                 <div>
-                    <p> Create the following models - animal.location, animal.type and animal.vaccine
+                    <h6> To Do's</h6>
                     <ul>
-                        <li>
-                            For animal.vaccine, animal.location and animal.type, add a mandatory name.
-                        </li>
-                        <li>
-                            For the animal model, create these fields:
+                        <li> Create the following models - animal.location, animal.type and animal.vaccine, each of
+                            which has a required name field</li>
+                        <li> For the animal model, create these fields:
                             <ul>
                                 <li>
                                     animal_type_id - a Many2one field that links to animal.type
@@ -397,16 +395,23 @@ Copy
                                     released_country_id - a Many2one that links to res.country
                                 </li>
                                 <li>
-                                    vet_phone - a related field that takes the work phone of the vet. 
+                                    vet_phone - a related field that takes the work phone of the vet.
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            For animal.location, add an animal_id field - a One2many linking to animals.
+                        <li> For animal.location, add an animal_id field - a One2many linking to animals.
                         </li>
+                        <li> Add access rights for these models and import them. </li>
                     </ul>
-
-                    </p>
+                </div>
+                <div>
+                    <h6> Notes</h6>
+                    <ul>
+                        <li>
+                            One2many fields require a Many2one field on the other model (comodel) that will act as the inverse field.
+                        </li>
+                        <li> Many2many field values are stored in a separate table, and therefore do not require an inverse field.</li>
+                    </ul>
                 </div>
 
                 <!-- BOTTOM NAV -->

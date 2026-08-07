@@ -359,38 +359,45 @@ Copy
         <main class="main">
             <div class="content">
 
-                  <!-- TOP NAV -->
+                <!-- TOP NAV -->
                 <div class="page-nav-top">
                     <a href="./animal-shelter-part-6.html">← Back to Activity 6</a>
                 </div>
 
                 <!-- PAGE CONTENT -->
                 <h1>Animal Shelter — Activity 7</h1>
+
                 <div>
-                    <p> Create the following widgets in the animals form:
+                    <h3> To Do's</h3>
                     <ul>
+                        <li> Create a statusbar to show the state of the animal.</li>
+                        <li> Create two buttons in the form header - "Arrived at Center" and "Released". Make sure to
+                            include the corresponding Python fun</li>
                         <li>
-                            A statusbar that shows the state of the animal - <b>"Not Received" </b>, <b>"At The Center" </b> or <b>"Released"</b>.
+                            The vet_phone field should be invisible if there is no vet assigned.
                         </li>
                         <li>
-                           A button in the form header called "Arrived at Center". When clicked, the state of the animal changes to "At The Center". This button should only be visible when the state of the animal is "Not Received".
-                        </li>
-                        <li>
-                            A button in the form header called "Release". When clicked, the state of the animal changes to "Released". This button should only be visible when the state of the animal is "At The Center".
+                            The released_country_id field should be invisible if the animal is not received or at the
+                            center.
                         </li>
                     </ul>
+                </div>
 
-                    </p>
-                    <p> Add attributes to the following fields: 
-                        <ul>
-                            <li>
-                                The vet_phone field should be invisible if there is no vet assigned.
-                            </li>
-                            <li>
-                                The released_country_id field should be invisible if the animal is not received or at the center.
-                            </li>
-                        </ul>
-                    </p>
+                <div>
+                    <p> The statusbar and the buttons should be in the animals_views.xml file in the form view and
+                        should be like so: </p>
+                    <img src="../assets/img/activity 7 statusbar.png" />
+                </div>
+
+                <div>
+                    <p> Use the invisible attribute in the following way for the vet_phone field.</p>
+                    <img src = "../assets/img/activity 7 vet phone.png" />
+                </div>
+
+
+                <div>
+                    <p> Use the invisible attribute in the following way for the released_country_id field.</p>
+                    <img src = "../assets/img/activity 7 released country id.png" />
                 </div>
 
                 <!-- BOTTOM NAV -->

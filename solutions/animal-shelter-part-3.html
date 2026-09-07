@@ -369,43 +369,56 @@ Copy
                 <div>
                     <h3> To-Do's </h3>
                     <ul>
+                        <li> Add the security for the animals model in security/ir.model.access.csv.</li>
                         <li> Add a new folder called views and add an XML file inside it. </li>
-                        <li> Define two view records in the XML file, one for the form view and other for the list view.</li>
-                        <li> Add two menu items using <menuitem> element below the view records.</li>
+                        <li> Define two view records in the XML file, one for the form view and other for the list view.
+                        </li>
+                        <li> Add two menu items using
+                            <menuitem> element below the view records.
+                        </li>
                         <li> Add a window action using its model ir.actions.act_window before the menu item.</li>
-                        <li> Link the window action to the submenu item using the action attribute in the menu item element.</li>
+                        <li> Link the window action to the submenu item using the action attribute in the menu item
+                            element.</li>
                     </ul>
                 </div>
                 <div>
                     <h3> Notes </h3>
                     <ul>
                         <li> Wrap all the XML code in an <odoo> element.</li>
-                        <li> For view file names, the naming convention is <model_name>_views.xml e.g. animals_views.xml. </li>
-                        <li> For view record IDs, usually the model name and view type is added without any strict naming convention e.g. view_animals_form. </li>
-                        <li> For root menus, have the word 'root' as a naming convention e.g. animal_shelter_menu_root</li>
+                        <li> For view file names, the naming convention is <model_name>_views.xml e.g.
+                                animals_views.xml. </li>
+                        <li> For view record IDs, usually the model name and view type is added without any strict
+                            naming convention e.g. view_animals_form. </li>
+                        <li> For root menus, have the word 'root' as a naming convention e.g. animal_shelter_menu_root
+                        </li>
                         <li> Root menus, or menus without any parent, appear on the apps selection screen.</li>
                         <li> A menu item without a linked action or a submenu does not appear in the view.</li>
-                        <li> Window actions must be always defined before menu items so that menu items can find their references.</li>
-                        <li> Window actions have useful fields one of which can be used to filter records in the views.</li>
+                        <li> Window actions must be always defined before menu items so that menu items can find their
+                            references.</li>
+                        <li> Window actions have useful fields one of which can be used to filter records in the views.
+                        </li>
                     </ul>
                 </div>
 
                 <br />
-
+                <div>
+                    <p> The security for the animals model should resemble the following:</p>
+                    <img src="../assets/img/security activity 2.png" />
+                </div>
                 <div>
                     <p> The animals_menus.xml should look like so:</p>
-                    <img src = "../assets/img/activity 3 menus.png" />
+                    <img src="../assets/img/activity 3 menus.png" />
                 </div>
                 <br />
                 <div>
                     <p> List view should be added to animals_views.xml:</p>
-                    <img src = "../assets/img/activity 3 list view.png" />
+                    <img src="../assets/img/activity 3 list view.png" />
                 </div>
 
                 <br />
                 <div>
                     <p> Form view should also be added to animals_views.xml</p>
-                    <img src = "../assets/img/activity 3 form view.png" />
+                    <img src="../assets/img/activity 3 form view.png" />
                 </div>
 
                 <!-- BOTTOM NAV -->
